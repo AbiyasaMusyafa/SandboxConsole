@@ -47,10 +47,10 @@ namespace Sandboxing
 					HandleMathCommands(command);
 					break;
 				case "print":
-					PrintMSG();
+					PrintMSG(readInput);
 					break;
 				case "changeuser":
-					ChangeUser();
+					ChangeUser(readInput);
 					break;
 				case "listcmd":
 					PredefinedClusterfuck.ShowCommandList();
@@ -94,11 +94,19 @@ namespace Sandboxing
 			}
 		}
 
-		void PrintMSG()
+		void PrintMSG(string[] messageSrc)
 		{
-			foreach (string s in readInput)
+			foreach (string s in messageSrc)
 			{
-				if (s != readInput[0])
+				if (s == "-clear")
+				{
+					Console.Clear();
+				}
+				if (s == "-n")
+				{
+					Console.WriteLine();
+				}
+				if (s != messageSrc[0] && s != "-clear" && s != "-n")
 				{
 					Console.Write($"{s} ");
 				}
@@ -106,9 +114,9 @@ namespace Sandboxing
 			Console.WriteLine();
 		}
 
-		void ChangeUser()
+		void ChangeUser(string[] newUsername)
 		{
-			Username = readInput[1];
+			Username = newUsername[1];
 
 			Console.WriteLine($"User has been changed to {Username}");
 		}
