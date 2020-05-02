@@ -46,8 +46,8 @@ namespace Sandboxing
 				case "divide":
 					HandleMathCommands(command);
 					break;
-				case "say":
-					Say();
+				case "print":
+					PrintMSG();
 					break;
 				case "changeuser":
 					ChangeUser();
@@ -94,7 +94,7 @@ namespace Sandboxing
 			}
 		}
 
-		void Say()
+		void PrintMSG()
 		{
 			foreach (string s in readInput)
 			{

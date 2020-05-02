@@ -38,7 +38,7 @@ namespace Sandboxing
 			Console.ForegroundColor = ConsoleColor.DarkBlue;
 			Console.WriteLine("(Usage: <command> <args>)");
 			Console.ForegroundColor = ConsoleColor.Yellow;
-			Console.WriteLine("  changeuser  say");
+			Console.WriteLine("  changeuser  print");
 			Console.ForegroundColor = ConsoleColor.Blue;
 			Console.WriteLine("Math: ");
 			Console.ForegroundColor = ConsoleColor.DarkBlue;
