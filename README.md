@@ -2,4 +2,4 @@
 
 Screenshot:
 
-![SandboxConsole](https://github.com/AbiyasaMusyafa/SandboxConsole/blob/master/SandboxKonsol.PNG)
+![SandboxConsole](https://github.com/AbiyasaMusyafa/SandboxConsole/blob/master/Images/SandboxKonsol.PNG)
