@@ -74,19 +74,19 @@ namespace Sandboxing
 			switch (cmd)
 			{
 				case "add":
-					int add = Mathf.Add(readInput);
+					double add = Mathf.Add(readInput);
 					Console.WriteLine(add);
 					break;
 				case "subtract":
-					int subtract = Mathf.Subtract(readInput);
+					double subtract = Mathf.Subtract(readInput);
 					Console.WriteLine(subtract);
 					break;
 				case "multiply":
-					int multiply = Mathf.Multiply(readInput);
+					double multiply = Mathf.Multiply(readInput);
 					Console.WriteLine(multiply);
 					break;
 				case "divide":
-					int divide = Mathf.Divide(readInput);
+					double divide = Mathf.Divide(readInput);
 					Console.WriteLine(divide);
 					break;
 				default:

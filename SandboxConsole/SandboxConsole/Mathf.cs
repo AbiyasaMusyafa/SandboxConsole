@@ -14,7 +14,7 @@ namespace Sandboxing
 		/// <summary>
 		/// Usage: add num[1] num[2] . . . num[n]
 		/// </summary>
-		public static int Add(string[] numbers)
+		public static double Add(string[] numbers)
 		{
 			return ConvertStrArrayToIntArray(numbers).Sum();
 		}
@@ -22,10 +22,10 @@ namespace Sandboxing
 		/// <summary>
 		/// Usage: subtract num[1] num[2] . . . num[n]
 		/// </summary>
-		public static int Subtract(string[] numbers)
+		public static double Subtract(string[] numbers)
 		{
-			int[] n = ConvertStrArrayToIntArray(numbers);
-			int result = n[1];
+			double[] n = ConvertStrArrayToIntArray(numbers);
+			double result = n[1];
 
 			for (int i = 2; i < n.Length; i++)
 			{
@@ -38,10 +38,10 @@ namespace Sandboxing
 		/// <summary>
 		/// Usage: multiply num[1] num[2] . . . num[n]
 		/// </summary>
-		public static int Multiply(string[] numbers)
+		public static double Multiply(string[] numbers)
 		{
-			int[] n = ConvertStrArrayToIntArray(numbers);
-			int result = n[1];
+			double[] n = ConvertStrArrayToIntArray(numbers);
+			double result = n[1];
 
 			for (int i = 2; i < n.Length; i++)
 			{
@@ -54,10 +54,10 @@ namespace Sandboxing
 		/// <summary>
 		/// Usage: divide num[1] num[2] . . . num[n]
 		/// </summary>
-		public static int Divide(string[] numbers)
+		public static double Divide(string[] numbers)
 		{
-			int[] n = ConvertStrArrayToIntArray(numbers);
-			int result = n[1];
+			double[] n = ConvertStrArrayToIntArray(numbers);
+			double result = n[1];
 
 			for (int i = 2; i < n.Length; i++)
 			{
@@ -70,13 +70,13 @@ namespace Sandboxing
 		/// <summary>
 		/// Converts a string[] array into an int[] array
 		/// </summary>
-		public static int[] ConvertStrArrayToIntArray(string[] arrayString)
+		public static double[] ConvertStrArrayToIntArray(string[] arrayString)
 		{
-			int[] n = new int[arrayString.Length];
+			double[] n = new double[arrayString.Length];
 
 			for (int i = 1; i < arrayString.Length; i++)
 			{
-				int.TryParse(arrayString[i], out n[i]);
+				double.TryParse(arrayString[i], out n[i]);
 			}
 
 			return n;
