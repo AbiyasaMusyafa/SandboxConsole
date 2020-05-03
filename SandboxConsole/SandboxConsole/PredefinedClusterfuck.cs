@@ -32,19 +32,25 @@ namespace Sandboxing
 			Console.ForegroundColor = ConsoleColor.Blue;
 			Console.WriteLine("Program:");
 			Console.ForegroundColor = ConsoleColor.Yellow;
-			Console.WriteLine("  quit  listcmd  clear");
+			Console.WriteLine("  quit\t\tShutdown this program");
+			Console.WriteLine("  listcmd\tShow every available commands");
+			Console.WriteLine("  clear\t\tClear the console");
 			Console.ForegroundColor = ConsoleColor.Blue;
 			Console.WriteLine("Miscellaneous:");
 			Console.ForegroundColor = ConsoleColor.DarkBlue;
 			Console.WriteLine("(Usage: <command> <args> <words>)");
 			Console.ForegroundColor = ConsoleColor.Yellow;
-			Console.WriteLine("  changeuser  print");
+			Console.WriteLine("  changeuser\tChange the username. Only reads one word after the command");
+			Console.WriteLine("  print\t\tWrite words after the command. (-clear: clear console) (-n: write a new line)");
 			Console.ForegroundColor = ConsoleColor.Blue;
 			Console.WriteLine("Math: ");
 			Console.ForegroundColor = ConsoleColor.DarkBlue;
 			Console.WriteLine("(Usage: <command> <number[1] number[2] . . . number[n]>)");
 			Console.ForegroundColor = ConsoleColor.Yellow;
-			Console.WriteLine("  add  subtract  multiply  divide");
+			Console.WriteLine("  add\t\tAdds every number after the command. Supports more than two numbers");
+			Console.WriteLine("  subtract\tSubtracts every number after the command. Supports more than two numbers");
+			Console.WriteLine("  multiply\tMultiplies every number after the command. Supports more than two numbers");
+			Console.WriteLine("  divide\tDivides every number after the command. Supports more than two numbers");
 			Console.ForegroundColor = ConsoleColor.Red;
 			Console.WriteLine("");
 		}

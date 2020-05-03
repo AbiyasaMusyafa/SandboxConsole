@@ -11,6 +11,11 @@ namespace Sandboxing
 	/// </summary>
 	class Mathf
 	{
+		public static string[] mathcmd = new string[4] 
+		{ 
+			"add", "subtract", "multiply", "divide"
+		};
+
 		/// <summary>
 		/// Usage: add num[1] num[2] . . . num[n]
 		/// </summary>
@@ -33,6 +38,7 @@ namespace Sandboxing
 			}
 
 			return result;
+			n = null;
 		}
 
 		/// <summary>
@@ -49,6 +55,7 @@ namespace Sandboxing
 			}
 
 			return result;
+			n = null;
 		}
 
 		/// <summary>
@@ -65,6 +72,7 @@ namespace Sandboxing
 			}
 
 			return result;
+			n = null;
 		}
 
 		/// <summary>
@@ -80,6 +88,7 @@ namespace Sandboxing
 			}
 
 			return n;
+			n = null;
 		}
 	}
 }

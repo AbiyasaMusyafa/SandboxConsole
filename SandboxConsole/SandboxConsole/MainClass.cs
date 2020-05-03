@@ -31,21 +31,15 @@ namespace Sandboxing
 		{
 			PredefinedClusterfuck.ReadSetup();
 			string _read = Console.ReadLine();
-
 			readInput = _read.Split();
 			command = readInput[0].ToLower();
+
 		}
 
 		void HandleCommandInputs()
 		{
 			switch (command)
 			{
-				case "add":
-				case "subtract":
-				case "multiply":
-				case "divide":
-					HandleMathCommands(command);
-					break;
 				case "print":
 					PrintMSG(readInput);
 					break;
@@ -62,7 +56,11 @@ namespace Sandboxing
 					Program.OnShutdown();
 					break;
 				default:
-					if (command != "")
+					if (Mathf.mathcmd.Any(s => s.Contains(command)))
+					{
+						HandleMathCommands(command);
+					}
+					else if (command != "")
 					{
 						Console.WriteLine($"Unrecognized command \'{command}\'\nType 'listcmd' to view available commands");
 					}
