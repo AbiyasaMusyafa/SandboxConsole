@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using SandboxConsole.Math;
+using SandboxConsole.CommandsLib;
 
-namespace Sandboxing
+namespace SandboxConsole
 {
 	class MainClass
 	{
@@ -24,7 +23,7 @@ namespace Sandboxing
 		public void OnUpdate()
 		{
 			ReadCommand();
-			HandleCommandInputs();
+			HandleCommandInputs(readInput);
 		}
 
 		void ReadCommand()
@@ -35,15 +34,24 @@ namespace Sandboxing
 			command = readInput[0].ToLower();
 		}
 
-		void HandleCommandInputs()
+		void HandleCommandInputs(string[] args)
 		{
 			switch (command)
 			{
+				case "google":
+					Commands.GoogleSearch(args);
+					break;
+				case "duckduckgo":
+					Commands.DuckDuckGoSearch(args);
+					break;
+				case "youtube":
+					Commands.YoutubeSearch(args);
+					break;
 				case "print":
-					PrintMSG(readInput);
+					Commands.PrintMSG(args);
 					break;
 				case "changeuser":
-					ChangeUser(readInput);
+					Username = Commands.ChangeUser(args);
 					break;
 				case "listcmd":
 					PredefinedClusterfuck.ShowCommandList();
@@ -57,7 +65,7 @@ namespace Sandboxing
 				default:
 					if (Mathf.mathcmd.Any(s => s.Contains(command)))
 					{
-						HandleMathCommands(command);
+						HandleMathCommands(command, args);
 					}
 					else if (command != "")
 					{
@@ -66,24 +74,24 @@ namespace Sandboxing
 					break;
 			}
 		}
-		void HandleMathCommands(string cmd)
+		void HandleMathCommands(string cmd, string[] args)
 		{
 			switch (cmd)
 			{
 				case "add":
-					double add = Mathf.Add(readInput);
+					double add = Mathf.Add(args);
 					Console.WriteLine(add);
 					break;
 				case "subtract":
-					double subtract = Mathf.Subtract(readInput);
+					double subtract = Mathf.Subtract(args);
 					Console.WriteLine(subtract);
 					break;
 				case "multiply":
-					double multiply = Mathf.Multiply(readInput);
+					double multiply = Mathf.Multiply(args);
 					Console.WriteLine(multiply);
 					break;
 				case "divide":
-					double divide = Mathf.Divide(readInput);
+					double divide = Mathf.Divide(args);
 					Console.WriteLine(divide);
 					break;
 				default:
@@ -91,31 +99,6 @@ namespace Sandboxing
 			}
 		}
 
-		void PrintMSG(string[] messageSrc)
-		{
-			foreach (string s in messageSrc)
-			{
-				if (s == "-clear")
-				{
-					Console.Clear();
-				}
-				if (s == "-n")
-				{
-					Console.WriteLine();
-				}
-				if (s != messageSrc[0] && s != "-clear" && s != "-n")
-				{
-					Console.Write($"{s} ");
-				}
-			}
-			Console.WriteLine();
-		}
-
-		void ChangeUser(string[] newUsername)
-		{
-			Username = newUsername[1];
-
-			Console.WriteLine($"User has been changed to {Username}");
-		}
+		
 	}
 }

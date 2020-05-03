@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Sandboxing
+namespace SandboxConsole
 {
 	/// <summary>
 	/// To predefine methods contain a lot of Console methods usage.
@@ -51,6 +47,14 @@ namespace Sandboxing
 			Console.WriteLine("  subtract\tSubtracts every number after the command. Supports more than two numbers");
 			Console.WriteLine("  multiply\tMultiplies every number after the command. Supports more than two numbers");
 			Console.WriteLine("  divide\tDivides every number after the command. Supports more than two numbers");
+			Console.ForegroundColor = ConsoleColor.Blue;
+			Console.WriteLine("Internet:");
+			Console.ForegroundColor = ConsoleColor.DarkBlue;
+			Console.WriteLine("(Usage: <command> <searchkeys>)");
+			Console.ForegroundColor = ConsoleColor.Yellow;
+			Console.WriteLine("  google\tSearch to web using Google");
+			Console.WriteLine("  duckduckgo\tSearch to web using DuckDuckGo");
+			Console.WriteLine("  youtube\tSearch on YouTube");
 			Console.ForegroundColor = ConsoleColor.Red;
 			Console.WriteLine("");
 		}
