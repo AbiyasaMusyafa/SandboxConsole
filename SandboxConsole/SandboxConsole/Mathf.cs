@@ -38,7 +38,6 @@ namespace Sandboxing
 			}
 
 			return result;
-			n = null;
 		}
 
 		/// <summary>
@@ -55,7 +54,6 @@ namespace Sandboxing
 			}
 
 			return result;
-			n = null;
 		}
 
 		/// <summary>
@@ -72,7 +70,6 @@ namespace Sandboxing
 			}
 
 			return result;
-			n = null;
 		}
 
 		/// <summary>
@@ -88,7 +85,6 @@ namespace Sandboxing
 			}
 
 			return n;
-			n = null;
 		}
 	}
 }

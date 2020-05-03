@@ -33,7 +33,6 @@ namespace Sandboxing
 			string _read = Console.ReadLine();
 			readInput = _read.Split();
 			command = readInput[0].ToLower();
-
 		}
 
 		void HandleCommandInputs()
