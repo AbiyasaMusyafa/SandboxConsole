@@ -40,51 +40,61 @@ namespace SandboxConsole.CommandsLib
 		public static void GoogleSearch(string[] searchkeys)
 		{
 			string url = "https://www.google.com/search?q=";
-			for (int i = 1; i < searchkeys.Length; i++)
+			
+			if (searchkeys.Length == 1)
 			{
-				if (i != searchkeys.Length - 1)
+				url = "https://www.google.com/";
+			}
+			else
+			{
+				for (int i = 1; i < searchkeys.Length; i++)
 				{
-					url = url + searchkeys[i] + "+"
-; }
-				else url = url + searchkeys[i];
+					url = i != searchkeys.Length - 1 ? url + searchkeys[i] + "+" : url + searchkeys[i];
+				}
 			}
 
 			Process.Start(url);
-			Console.WriteLine($"Opened URL in browser: \'{url}\'");
+			Console.WriteLine($"Opened URL in browser: \"{url}\"");
 		}
 
 		public static void DuckDuckGoSearch(string[] searchkeys)
 		{
 			string url = "https://duckduckgo.com/?q=";
-			for (int i = 1; i < searchkeys.Length; i++)
+
+			if (searchkeys.Length == 1)
 			{
-				if (i != searchkeys.Length - 1)
+				url = "https://duckduckgo.com/";
+			}
+			else
+			{
+				for (int i = 1; i < searchkeys.Length; i++)
 				{
-					url = url + searchkeys[i] + "+"
-;
+					url = i != searchkeys.Length - 1 ? url + searchkeys[i] + "+" : url + searchkeys[i];
 				}
-				else url = url + searchkeys[i];
 			}
 
 			Process.Start(url);
-			Console.WriteLine($"Opened URL in browser: \'{url}\'");
+			Console.WriteLine($"Opened URL in browser: \"{url}\"");
 		}
 
 		public static void YoutubeSearch(string[] searchkeys)
 		{
 			string url = "https://www.youtube.com/results?search_query=";
-			for (int i = 1; i < searchkeys.Length; i++)
+
+			if (searchkeys.Length == 1)
 			{
-				if (i != searchkeys.Length - 1)
+				url = "https://www.youtube.com/";
+			}
+			else
+			{
+				for (int i = 1; i < searchkeys.Length; i++)
 				{
-					url = url + searchkeys[i] + "+"
-;
+					url = i != searchkeys.Length - 1 ? url + searchkeys[i] + "+" : url + searchkeys[i];
 				}
-				else url = url + searchkeys[i];
 			}
 
 			Process.Start(url);
-			Console.WriteLine($"Opened URL in browser: \'{url}\'");
+			Console.WriteLine($"Opened URL in browser: \"{url}\"");
 		}
 	}
 }

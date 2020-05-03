@@ -34,14 +34,14 @@ namespace SandboxConsole
 			Console.ForegroundColor = ConsoleColor.Blue;
 			Console.WriteLine("Miscellaneous:");
 			Console.ForegroundColor = ConsoleColor.DarkBlue;
-			Console.WriteLine("(Usage: <command> <args> <words>)");
+			Console.WriteLine(">Usage: <command> <args> <words>");
 			Console.ForegroundColor = ConsoleColor.Yellow;
 			Console.WriteLine("  changeuser\tChange the username. Only reads one word after the command");
 			Console.WriteLine("  print\t\tWrite words after the command. (-clear: clear console) (-n: write a new line)");
 			Console.ForegroundColor = ConsoleColor.Blue;
 			Console.WriteLine("Math: ");
 			Console.ForegroundColor = ConsoleColor.DarkBlue;
-			Console.WriteLine("(Usage: <command> <number[1] number[2] . . . number[n]>)");
+			Console.WriteLine(">Usage: <command> <number[1] number[2] . . . number[n]>");
 			Console.ForegroundColor = ConsoleColor.Yellow;
 			Console.WriteLine("  add\t\tAdds every number after the command. Supports more than two numbers");
 			Console.WriteLine("  subtract\tSubtracts every number after the command. Supports more than two numbers");
@@ -50,7 +50,7 @@ namespace SandboxConsole
 			Console.ForegroundColor = ConsoleColor.Blue;
 			Console.WriteLine("Internet:");
 			Console.ForegroundColor = ConsoleColor.DarkBlue;
-			Console.WriteLine("(Usage: <command> <searchkeys>)");
+			Console.WriteLine(">Usage: <command> <searchkeys>");
 			Console.ForegroundColor = ConsoleColor.Yellow;
 			Console.WriteLine("  google\tSearch to web using Google");
 			Console.WriteLine("  duckduckgo\tSearch to web using DuckDuckGo");

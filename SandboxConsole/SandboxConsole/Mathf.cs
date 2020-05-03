@@ -16,10 +16,7 @@ namespace SandboxConsole.Math
 		/// <summary>
 		/// Usage: add num[1] num[2] . . . num[n]
 		/// </summary>
-		public static double Add(string[] numbers)
-		{
-			return ConvertStrArrayToIntArray(numbers).Sum();
-		}
+		public static double Add(string[] numbers) => ConvertStrArrayToIntArray(numbers).Sum();
 
 		/// <summary>
 		/// Usage: subtract num[1] num[2] . . . num[n]

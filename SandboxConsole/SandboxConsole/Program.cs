@@ -22,7 +22,7 @@ namespace SandboxConsole
 		{
 			Running = true;
 			Console.Title = "Sandbox Console";
-
+			
 			Console.WriteLine("Sandbox Console Window\nType 'listcmd' to view available commands");
 		}
 
