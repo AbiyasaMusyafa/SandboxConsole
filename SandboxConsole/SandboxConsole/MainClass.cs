@@ -7,7 +7,7 @@ namespace SandboxConsole
 {
 	class MainClass
 	{
-		string[] readInput;
+		string[] userinputs;
 		string command;
 
 		private static string _username;
@@ -23,15 +23,15 @@ namespace SandboxConsole
 		public void OnUpdate()
 		{
 			ReadCommand();
-			HandleCommandInputs(readInput);
+			HandleCommandInputs(userinputs);
 		}
 
 		void ReadCommand()
 		{
 			PredefinedClusterfuck.ReadSetup();
 			string _read = Console.ReadLine();
-			readInput = _read.Split();
-			command = readInput[0].ToLower();
+			userinputs = _read.Split();
+			command = userinputs[0].ToLower();
 		}
 
 		void HandleCommandInputs(string[] args)
