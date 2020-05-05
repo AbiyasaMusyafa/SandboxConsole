@@ -76,23 +76,24 @@ namespace SandboxConsole
 		}
 		void HandleMathCommands(string cmd, string[] args)
 		{
+			double _result;
 			switch (cmd)
 			{
 				case "add":
-					double add = Mathf.Add(args);
-					Console.WriteLine(add);
+					_result = Mathf.Add(args);
+					Console.WriteLine(_result);
 					break;
 				case "subtract":
-					double subtract = Mathf.Subtract(args);
-					Console.WriteLine(subtract);
+					_result = Mathf.Subtract(args);
+					Console.WriteLine(_result);
 					break;
 				case "multiply":
-					double multiply = Mathf.Multiply(args);
-					Console.WriteLine(multiply);
+					_result = Mathf.Multiply(args);
+					Console.WriteLine(_result);
 					break;
 				case "divide":
-					double divide = Mathf.Divide(args);
-					Console.WriteLine(divide);
+					_result = Mathf.Divide(args);
+					Console.WriteLine(_result);
 					break;
 				default:
 					break;
