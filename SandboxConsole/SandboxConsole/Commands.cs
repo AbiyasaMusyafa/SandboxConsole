@@ -9,9 +9,11 @@ namespace SandboxConsole.CommandsLib
 {
 	class Commands
 	{
-		public static void PrintMSG(string[] messageSrc)
+		public static string URL;
+
+		public static void Print(string[] messages)
 		{
-			foreach (string s in messageSrc)
+			foreach (string s in messages)
 			{
 				if (s == "-clear")
 				{
@@ -21,7 +23,7 @@ namespace SandboxConsole.CommandsLib
 				{
 					Console.WriteLine();
 				}
-				if (s != messageSrc[0] && s != "-clear" && s != "-n")
+				if (s != messages[0] && s != "-clear" && s != "-n")
 				{
 					Console.Write($"{s} ");
 				}
@@ -39,62 +41,62 @@ namespace SandboxConsole.CommandsLib
 
 		public static void GoogleSearch(string[] searchkeys)
 		{
-			string url = "https://www.google.com/search?q=";
+			URL = "https://www.google.com/search?q=";
 			
 			if (searchkeys.Length == 1)
 			{
-				url = "https://www.google.com/";
+				URL = "https://www.google.com/";
 			}
 			else
 			{
 				for (int i = 1; i < searchkeys.Length; i++)
 				{
-					url = i != searchkeys.Length - 1 ? url + searchkeys[i] + "+" : url + searchkeys[i];
+					URL = i != searchkeys.Length - 1 ? URL + searchkeys[i] + "+" : URL + searchkeys[i];
 				}
 			}
 
-			Process.Start(url);
-			Console.WriteLine($"Opened URL in browser: \"{url}\"");
+			Process.Start(URL);
+			Console.WriteLine($"Opened URL in browser: \"{URL}\"");
 		}
 
 		public static void DuckDuckGoSearch(string[] searchkeys)
 		{
-			string url = "https://duckduckgo.com/?q=";
+			URL = "https://duckduckgo.com/?q=";
 
 			if (searchkeys.Length == 1)
 			{
-				url = "https://duckduckgo.com/";
+				URL = "https://duckduckgo.com/";
 			}
 			else
 			{
 				for (int i = 1; i < searchkeys.Length; i++)
 				{
-					url = i != searchkeys.Length - 1 ? url + searchkeys[i] + "+" : url + searchkeys[i];
+					URL = i != searchkeys.Length - 1 ? URL + searchkeys[i] + "+" : URL + searchkeys[i];
 				}
 			}
 
-			Process.Start(url);
-			Console.WriteLine($"Opened URL in browser: \"{url}\"");
+			Process.Start(URL);
+			Console.WriteLine($"Opened URL in browser: \"{URL}\"");
 		}
 
 		public static void YoutubeSearch(string[] searchkeys)
 		{
-			string url = "https://www.youtube.com/results?search_query=";
+			URL = "https://www.youtube.com/results?search_query=";
 
 			if (searchkeys.Length == 1)
 			{
-				url = "https://www.youtube.com/";
+				URL = "https://www.youtube.com/";
 			}
 			else
 			{
 				for (int i = 1; i < searchkeys.Length; i++)
 				{
-					url = i != searchkeys.Length - 1 ? url + searchkeys[i] + "+" : url + searchkeys[i];
+					URL = i != searchkeys.Length - 1 ? URL + searchkeys[i] + "+" : URL + searchkeys[i];
 				}
 			}
 
-			Process.Start(url);
-			Console.WriteLine($"Opened URL in browser: \"{url}\"");
+			Process.Start(URL);
+			Console.WriteLine($"Opened URL in browser: \"{URL}\"");
 		}
 	}
 }

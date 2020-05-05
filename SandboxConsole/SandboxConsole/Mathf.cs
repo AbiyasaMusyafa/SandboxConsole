@@ -16,14 +16,14 @@ namespace SandboxConsole.Math
 		/// <summary>
 		/// Usage: add num[1] num[2] . . . num[n]
 		/// </summary>
-		public static double Add(string[] numbers) => ConvertStrArrayToIntArray(numbers).Sum();
+		public static double Add(string[] numbers) => ConvertStrArrayToDoubleArray(numbers).Sum();
 
 		/// <summary>
 		/// Usage: subtract num[1] num[2] . . . num[n]
 		/// </summary>
 		public static double Subtract(string[] numbers)
 		{
-			double[] n = ConvertStrArrayToIntArray(numbers);
+			double[] n = ConvertStrArrayToDoubleArray(numbers);
 			double result = n[1];
 
 			for (int i = 2; i < n.Length; i++)
@@ -39,7 +39,7 @@ namespace SandboxConsole.Math
 		/// </summary>
 		public static double Multiply(string[] numbers)
 		{
-			double[] n = ConvertStrArrayToIntArray(numbers);
+			double[] n = ConvertStrArrayToDoubleArray(numbers);
 			double result = n[1];
 
 			for (int i = 2; i < n.Length; i++)
@@ -55,7 +55,7 @@ namespace SandboxConsole.Math
 		/// </summary>
 		public static double Divide(string[] numbers)
 		{
-			double[] n = ConvertStrArrayToIntArray(numbers);
+			double[] n = ConvertStrArrayToDoubleArray(numbers);
 			double result = n[1];
 
 			for (int i = 2; i < n.Length; i++)
@@ -69,7 +69,7 @@ namespace SandboxConsole.Math
 		/// <summary>
 		/// Converts a string[] array into an int[] array
 		/// </summary>
-		public static double[] ConvertStrArrayToIntArray(string[] arrayString)
+		public static double[] ConvertStrArrayToDoubleArray(string[] arrayString)
 		{
 			double[] n = new double[arrayString.Length];
 

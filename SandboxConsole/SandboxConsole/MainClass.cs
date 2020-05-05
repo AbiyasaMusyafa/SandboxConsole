@@ -48,7 +48,7 @@ namespace SandboxConsole
 					Commands.YoutubeSearch(args);
 					break;
 				case "print":
-					Commands.PrintMSG(args);
+					Commands.Print(args);
 					break;
 				case "changeuser":
 					Username = Commands.ChangeUser(args);
