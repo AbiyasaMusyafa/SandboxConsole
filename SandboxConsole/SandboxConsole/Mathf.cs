@@ -28,7 +28,7 @@ namespace SandboxConsole.Math
 
 			for (int i = 2; i < n.Length; i++)
 			{
-				result -= n[i];
+				result += n[i] * -1;
 			}
 
 			return result;

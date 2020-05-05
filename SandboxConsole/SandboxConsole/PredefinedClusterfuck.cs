@@ -3,7 +3,7 @@
 namespace SandboxConsole
 {
 	/// <summary>
-	/// To predefine methods contain a lot of Console methods usage.
+	/// To prewritten methods contain a lot of Console methods usage.
 	/// </summary>
 	class PredefinedClusterfuck
 	{
