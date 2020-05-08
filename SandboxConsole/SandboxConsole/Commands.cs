@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.ComponentModel;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -37,6 +38,28 @@ namespace SandboxConsole.CommandsLib
 
 			Console.WriteLine($"User has been changed to {usr}");
 			return usr;
+		}
+
+		public static void RunProcess(string[] args)
+		{
+			URL = string.Empty;
+			for (int i = 1; i < args.Length; i++)
+			{
+				URL = URL + args[i];
+			}
+			if (URL != "")
+			{
+				try
+				{
+					Process.Start(URL);
+					Console.WriteLine($"Process started: \"{URL}\"");
+				}
+				catch (Win32Exception ex)
+				{
+					Console.WriteLine(ex.Message);
+				}
+			}
+			else Console.WriteLine("URL has not been specified");			
 		}
 
 		public static void GoogleSearch(string[] searchkeys)

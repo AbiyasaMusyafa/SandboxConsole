@@ -38,6 +38,9 @@ namespace SandboxConsole
 		{
 			switch (command)
 			{
+				case "run":
+					Commands.RunProcess(args);
+					break;
 				case "google":
 					Commands.GoogleSearch(args);
 					break;
