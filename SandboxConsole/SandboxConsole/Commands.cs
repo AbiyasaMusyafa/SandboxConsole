@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.ComponentModel;
+using System.Speech.Synthesis;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,30 @@ namespace SandboxConsole.CommandsLib
 	class Commands
 	{
 		public static string URL;
+		static SpeechSynthesizer Synth;
+
+		public static void Speak(string[] messages)
+		{
+			Console.Write("Speech rate: ");
+			string rateinput = Console.ReadLine();
+
+			if (int.TryParse(rateinput, out int rate))
+			{
+				Synth = new SpeechSynthesizer();
+				Synth.SetOutputToDefaultAudioDevice();
+
+				Synth.Volume = 100;
+				Synth.Rate = rate < -10 || rate > 10 ? 1 : rate;
+				string _msg = string.Join(" ", messages, 1, messages.Length - 1);
+
+				Console.WriteLine("Speaking: ");
+				Console.WriteLine(_msg);
+				Synth.Speak(_msg);
+
+				Synth.Dispose();
+			}
+			else Console.WriteLine($"Invalid input for speed \'{rateinput}\'");			
+		}
 
 		public static void Print(string[] messages)
 		{

@@ -38,6 +38,7 @@ namespace SandboxConsole
 			Console.ForegroundColor = ConsoleColor.Yellow;
 			Console.WriteLine("  changeuser\tChange the username. Only reads one word after the command");
 			Console.WriteLine("  print\t\tWrite words after the command. (-clear: clear console) (-n: write a new line)");
+			Console.WriteLine("  speak\t\tSpeak written input.");
 			Console.WriteLine("  run\t\tStart a process");
 			Console.ForegroundColor = ConsoleColor.Blue;
 			Console.WriteLine("Math: ");

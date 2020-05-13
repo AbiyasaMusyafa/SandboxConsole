@@ -50,6 +50,9 @@ namespace SandboxConsole
 				case "youtube":
 					Commands.YoutubeSearch(args);
 					break;
+				case "speak":
+					Commands.Speak(args);
+					break;
 				case "print":
 					Commands.Print(args);
 					break;
